@@ -57,7 +57,6 @@ export const RegisterPage = () => {
         open={open}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-        //onClose={handleClose}
         onSubmit={handleSubmitForm}
       >
         <Box sx={style}>
@@ -71,32 +70,22 @@ export const RegisterPage = () => {
           </Typography>
 
           <Container
+            disableGutters
             sx={{ display: 'flex', flexDirection: 'column', gap: '15px' }}
           >
-            <TextField
-              required
-              id="name"
-              label="Name"
-              size="small"
-              //defaultValue="Hello World"
-            />
-            <TextField
-              required
-              id="email"
-              label="Email"
-              size="small"
-              //defaultValue="Hello World"
-            />
+            <TextField required id="name" label="Name" size="small" />
+            <TextField required id="email" label="Email" size="small" />
             <TextField
               required
               id="password"
               label="Password"
               type="password"
               size="small"
-              //autoComplete="current-password"
             />
             <ButtonGroup>
-              <Button type="submit">Submit</Button>
+              <Button fullWidth type="submit">
+                Submit
+              </Button>
               <Button type="close" onClick={handleClose}>
                 Cancel
               </Button>

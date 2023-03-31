@@ -56,7 +56,6 @@ export const LoginPage = () => {
         open={open}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-        //onClose={handleClose}
         onSubmit={handleSubmitForm}
       >
         <Box sx={style}>
@@ -70,25 +69,21 @@ export const LoginPage = () => {
           </Typography>
 
           <Container
+            disableGutters
             sx={{ display: 'flex', flexDirection: 'column', gap: '15px' }}
           >
-            <TextField
-              required
-              id="email"
-              label="Email"
-              size="small"
-              //defaultValue="Hello World"
-            />
+            <TextField required id="email" label="Email" size="small" />
             <TextField
               required
               id="password"
               label="Password"
               type="password"
               size="small"
-              //autoComplete="current-password"
             />
             <ButtonGroup>
-              <Button type="submit">Submit</Button>
+              <Button fullWidth type="submit">
+                Submit
+              </Button>
               <Button type="close" onClick={handleClose}>
                 Cancel
               </Button>
@@ -97,32 +92,5 @@ export const LoginPage = () => {
         </Box>
       </Modal>
     </div>
-
-    ////////////////////////////////
-    // <Box
-    //   component="form"
-    //   sx={{
-    //     '& .MuiTextField-root': { m: 1, width: '25ch' },
-    //   }}
-    //   noValidate
-    //   autoComplete="off"
-    // >
-    //   <div>
-    //     <TextField
-    //       id="email-input"
-    //       label="Email"
-    //       type="email"
-    //       autoComplete="current-email"
-    //       size="small"
-    //     />
-    //     <TextField
-    //       id="password-input"
-    //       label="Password"
-    //       type="password"
-    //       autoComplete="current-password"
-    //       size="small"
-    //     />
-    //   </div>
-    // </Box>
   );
 };
