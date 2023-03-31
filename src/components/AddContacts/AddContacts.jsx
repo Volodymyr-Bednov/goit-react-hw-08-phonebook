@@ -6,8 +6,8 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import { Box, Container } from '@mui/system';
-//import { nanoid } from '@reduxjs/toolkit';
+import { Container } from '@mui/system';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'store/api';
 import { getContacts } from 'store/contacts/selectors';
@@ -34,7 +34,6 @@ export const AddContacts = () => {
     evt.target.reset();
   };
   return (
-    //<Box sx={{ justifyContent: 'center' }}>
     <List>
       <ListItem key="addContact" disablePadding>
         <Container
@@ -64,7 +63,6 @@ export const AddContacts = () => {
                 label="Name"
                 size="small"
                 fullWidth="true"
-                //defaultValue="Hello World"
               />
               <TextField
                 required
@@ -72,7 +70,6 @@ export const AddContacts = () => {
                 label="Number"
                 size="small"
                 fullWidth="true"
-                //defaultValue="Hello World"
               />
 
               <ButtonGroup id="btn-add">
@@ -85,6 +82,5 @@ export const AddContacts = () => {
         </Container>
       </ListItem>
     </List>
-    //</Box>
   );
 };

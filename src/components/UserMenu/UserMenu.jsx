@@ -1,12 +1,10 @@
 import {
-  Box,
   Divider,
   List,
   ListItem,
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  Typography,
 } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import { authLogout } from 'store/auth/authApi';

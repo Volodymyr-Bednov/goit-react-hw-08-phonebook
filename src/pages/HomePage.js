@@ -4,12 +4,6 @@ import {
   CssBaseline,
   Divider,
   Drawer,
-  // List,
-  // ListItem,
-  // ListItemButton,
-  // ListItemIcon,
-  //ListItemIcon,
-  // ListItemText,
   Toolbar,
   Typography,
 } from '@mui/material';
@@ -27,12 +21,6 @@ export const HomePage = () => {
   const userName = useSelector(getUserName);
   const isLoggedIn = useSelector(getIsLoggedIn);
   const navigate = useNavigate();
-
-  // const handlerClickMenu = buttonName => {
-  //   console.log(buttonName.toLowerCase());
-  //   navigate(`/${buttonName.toLowerCase()}`);
-
-  // };
 
   useEffect(() => {
     isLoggedIn ? navigate('/contacts') : navigate('/');
@@ -89,10 +77,6 @@ export const HomePage = () => {
               {' '}
               Hi! {isLoggedIn ? userName : 'You not regester'}
             </Typography>
-
-            {/* <Typography paragraph fontSize={14}>
-              Hi! {isLoggedIn ? userName : 'You not regester'}
-            </Typography> */}
           </Box>
         </Toolbar>
         <Divider />
