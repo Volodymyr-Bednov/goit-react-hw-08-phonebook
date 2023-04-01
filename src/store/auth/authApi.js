@@ -53,3 +53,24 @@ export const authLogout = createAsyncThunk(
     }
   }
 );
+
+export const authCurrent = createAsyncThunk(
+  'auth/authCurrent',
+  async (_, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const token = state.auth.token;
+    if (!token) return thunkAPI.rejectWithValue(5);
+
+    setAuthHeader(token);
+
+    console.log(token);
+    try {
+      const response = await axios.get('/users/current');
+      console.log(response.data);
+      return response.data;
+      // clearAuthHeader();
+    } catch (e) {
+      console.log('error', e);
+    }
+  }
+);

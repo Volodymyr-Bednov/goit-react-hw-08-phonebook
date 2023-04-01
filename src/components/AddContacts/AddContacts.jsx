@@ -62,14 +62,14 @@ export const AddContacts = () => {
                 id="name"
                 label="Name"
                 size="small"
-                fullWidth="true"
+                //fullWidth="true"
               />
               <TextField
                 required
                 id="number"
                 label="Number"
                 size="small"
-                fullWidth="true"
+                //fullWidth="true"
               />
 
               <ButtonGroup id="btn-add">

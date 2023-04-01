@@ -41,7 +41,7 @@ export const Firter = () => {
             id="filter"
             label="Find"
             size="small"
-            fullWidth="true"
+            //fullWidth="true"
           />
         </Container>
       </ListItem>

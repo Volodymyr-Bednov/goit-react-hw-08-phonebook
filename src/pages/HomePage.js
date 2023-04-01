@@ -16,15 +16,19 @@ import { useSelector } from 'react-redux';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { getIsLoggedIn, getUserName } from 'store/auth/authSelectors';
 
-const drawerWidth = 340;
 export const HomePage = () => {
+  const drawerWidth = 340;
   const userName = useSelector(getUserName);
   const isLoggedIn = useSelector(getIsLoggedIn);
   const navigate = useNavigate();
 
   useEffect(() => {
     isLoggedIn ? navigate('/contacts') : navigate('/');
-    console.log(isLoggedIn ? navigate('/contacts') : navigate('/'));
+    console.log(
+      'homePage',
+      isLoggedIn,
+      isLoggedIn ? navigate('/contacts') : navigate('/')
+    );
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLoggedIn]);
 
